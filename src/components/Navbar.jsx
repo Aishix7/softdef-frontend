@@ -26,6 +26,9 @@ export const Navbar = () => {
               <a href="/contact">CONTACT</a>
             </li>
           </ul>
+          <div className="flex space-x-4 items-center">
+            <ShoppingCart size={24} />
+          </div>
         </div>
       </nav>
     </>
