@@ -1,6 +1,7 @@
-import { ShoppingCart, Diamond, Menu } from "lucide-react";
-import react from "react";
+import { ShoppingCart, Menu } from "lucide-react";
+import react, { useState } from "react";
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <nav className="text-black bg-white border-[#F6F7F8] p-4">
@@ -57,12 +58,22 @@ export const Navbar = () => {
           </div>
         </div>
         {isOpen && (
-          <div>
-            <a href="/home">HOME</a>
-            <a href="/bag">BAG</a>
-            <a href="/sneakers">SNEAKERS</a>
-            <a href="/belt">BELT</a>
-            <a href="/contact">CONTACT</a>
+          <div className="md:hidden mt-3 bg-white border-t border-gray-200 flex flex-col items-center space-y-3 py-4">
+            <a href="/home" className="font-semibold text-[#40BFFF]">
+              HOME
+            </a>
+            <a href="/bag" className="font-semibold">
+              BAG
+            </a>
+            <a href="/sneakers" className="font-semibold">
+              SNEAKERS
+            </a>
+            <a href="/belt" className="font-semibold">
+              BELT
+            </a>
+            <a href="/contact" className="font-semibold">
+              CONTACT
+            </a>
           </div>
         )}
       </nav>
