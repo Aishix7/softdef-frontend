@@ -4,8 +4,8 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="text-black bg-white border-[#F6F7F8] p-4">
-        <div className="flex items-center container mx-auto justify-between ">
+      <nav className="text-black bg-white p-4">
+        <div className="flex py-4  border-b-[3px] border-[#f6f7f8] items-center container mx-auto justify-between ">
           <div className="flex items-center space-x-2">
             <div className="bg-[#40BFFF] w-[53px] h-[44px] rounded-[15px] flex items-center justify-center">
               <svg
