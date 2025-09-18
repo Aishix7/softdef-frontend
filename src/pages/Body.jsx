@@ -1,6 +1,6 @@
 import React from "react";
-import { Products } from "./Products";
-import { SideBar } from "./Sidebar";
+import { Products } from "../components/Products";
+import { SideBar } from "../components/Sidebar";
 
 export const Body = () => {
   return (
