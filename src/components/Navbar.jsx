@@ -44,7 +44,7 @@ export const Navbar = () => {
           </ul>
           <div className="flex space-x-4 items-center">
             <ShoppingCart size={22} />
-            <div className="hidden sm:flex space-x-1 text-sm md:text-base">
+            <div className="hidden sm:flex space-x-3 text-sm md:text-base">
               <span className="font-medium">Items</span>
               <span className="font-medium text-[#939393]">$0.00</span>
             </div>
