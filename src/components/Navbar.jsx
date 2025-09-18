@@ -6,12 +6,20 @@ export const Navbar = () => {
       <nav className="text-black bg-white border-[#F6F7F8] p-4">
         <div className="flex items-center container mx-auto justify-between ">
           <div className="flex items-center space-x-2">
-            <div className="bg-[#40BFFF] w-[79px] h-16 rounded-[25px] flex items-center justify-center">
-              <Diamond
-                className="text-white font-extrabold w-[65%] h-[35%] scale-x-110"
-                strokeWidth={6.5}
-                absoluteStrokeWidth
-              />
+            <div className="bg-[#40BFFF] w-[53px] h-[44px] rounded-[15px] flex items-center justify-center">
+              <svg
+                width="19.56"
+                height="22.67"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                strokeWidth="6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-[20.56px] h-[24.67px]"
+              >
+                <polygon points="12 4 21 12 12 20 2.8 12" />
+              </svg>
             </div>
             <span className="font-bold text-xl">E-Comm</span>
           </div>
