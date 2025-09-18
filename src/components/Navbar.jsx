@@ -1,4 +1,4 @@
-import { ShoppingCart, Diamond } from "lucide-react";
+import { ShoppingCart, Diamond, Menu } from "lucide-react";
 import react from "react";
 export const Navbar = () => {
   return (
@@ -21,10 +21,10 @@ export const Navbar = () => {
                 <polygon points="12 4 21 12 12 20 2.8 12" />
               </svg>
             </div>
-            <span className="font-bold text-xl">E-Comm</span>
+            <span className="font-bold text-lg sm:text-xl">E-Comm</span>
           </div>
 
-          <ul className="flex space-x-28">
+          <ul className="hidden md:flex space-x-6 lg:space-x-12 xl:space-x-20">
             <li className="text-[#40BFFF] font-semibold">
               <a href="/home">HOME</a>
             </li>
@@ -43,12 +43,28 @@ export const Navbar = () => {
           </ul>
           <div className="flex space-x-4 items-center">
             <ShoppingCart size={22} />
-            <div className="flex text-semibold space-x-2">
+            <div className="hidden sm:flex space-x-1 text-sm md:text-base">
               <span className="font-medium">Items</span>
               <span className="font-medium text-[#939393]">$0.00</span>
             </div>
+            <button
+              className="md:hidden"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Menu"
+            >
+              <Menu size={24} />
+            </button>
           </div>
         </div>
+        {isOpen && (
+          <div>
+            <a href="/home">HOME</a>
+            <a href="/bag">BAG</a>
+            <a href="/sneakers">SNEAKERS</a>
+            <a href="/belt">BELT</a>
+            <a href="/contact">CONTACT</a>
+          </div>
+        )}
       </nav>
     </>
   );
