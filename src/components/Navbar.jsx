@@ -10,6 +10,23 @@ export const Navbar = () => {
             <span className="font-bold text-xl">E-Comm</span>
           </div>
         </div>
+        <ul className="flex space-x-7">
+          <li>
+            <a href="/home">HOME</a>
+          </li>
+          <li>
+            <a href="/bag">BAG</a>
+          </li>
+          <li>
+            <a href="/sneakers">SNEAKERS</a>
+          </li>
+          <li>
+            <a href="/belt">BELT</a>
+          </li>
+          <li>
+            <a href="/contact">CONTACT</a>
+          </li>
+        </ul>
       </nav>
     </>
   );
