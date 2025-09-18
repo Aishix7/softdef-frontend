@@ -28,6 +28,10 @@ export const Navbar = () => {
           </ul>
           <div className="flex space-x-4 items-center">
             <ShoppingCart size={24} />
+            <div className="flex text-semibold space-x-2">
+              <span>Items</span>
+              <span className="font">$0.00</span>
+            </div>
           </div>
         </div>
       </nav>
