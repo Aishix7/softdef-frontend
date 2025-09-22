@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const SideBar = () => {
+export const SideBar = ({ onColorSelect }) => {
   const [minPrice, setMinPrice] = useState(13.99);
   const [maxPrice, setMaxPrice] = useState(50.99);
 
@@ -12,6 +12,21 @@ export const SideBar = () => {
   const toggleBrand = () => setBrandOpen(!brandOpen);
   const toggleColor = () => setColorOpen(!colorOpen);
 
+  const colors = [
+    "#006cff",
+    "#171717",
+    "#efdfdf",
+    "#fc3e39",
+    "#ff00b4",
+    "#fff600",
+  ];
+
+  const handleColorClick = (color) => {
+    if (onColorSelect) {
+      onColorSelect(color);
+    }
+  };
+
   return (
     <div className="flex flex-col bg-white space-y-4 p-2">
       <div className="bg-[#f6f7f8] rounded-md px-2 pb-6 gap-4">
@@ -21,7 +36,6 @@ export const SideBar = () => {
         >
           Hot Deals {hotDealsOpen ? "▲" : "▼"}
         </div>
-
         {hotDealsOpen && (
           <>
             <div className="flex items-center justify-between p-5 pb-5 font-[490]">
@@ -98,36 +112,15 @@ export const SideBar = () => {
         </div>
         {colorOpen && (
           <div className="flex flex-row items-center justify-center p-6 w-full space-x-8">
-            <input
-              type="radio"
-              name="color"
-              className="w-4 h-[1rem] cursor-pointer rounded-full appearance-none bg-[#006cff] checked:ring-2 checked:ring-offset-2 checked:ring-[#006cff]"
-            />
-            <input
-              type="radio"
-              name="color"
-              className="w-4 h-[1rem] cursor-pointer rounded-full appearance-none bg-[#171717] checked:ring-2 checked:ring-offset-2 checked:ring-[#171717]"
-            />
-            <input
-              type="radio"
-              name="color"
-              className="w-4 h-[1rem] cursor-pointer rounded-full appearance-none bg-[#efdfdf] checked:ring-2 checked:ring-offset-2 checked:ring-[#efdfdf]"
-            />
-            <input
-              type="radio"
-              name="color"
-              className="w-4 h-[1rem] cursor-pointer rounded-full appearance-none bg-[#fc3e39] checked:ring-2 checked:ring-offset-2 checked:ring-[#fc3e39]"
-            />
-            <input
-              type="radio"
-              name="color"
-              className="w-4 h-[1rem] cursor-pointer rounded-full appearance-none bg-[#ff00b4] checked:ring-2 checked:ring-offset-2 checked:ring-[#ff00b4]"
-            />
-            <input
-              type="radio"
-              name="color"
-              className="w-4 h-[1rem] cursor-pointer rounded-full appearance-none bg-[#fff600] checked:ring-2 checked:ring-offset-2 checked:ring-[#fff600]"
-            />
+            {colors.map((color) => (
+              <input
+                key={color}
+                type="radio"
+                name="color"
+                className={`w-[.7rem] h-[.6rem] cursor-pointer rounded-full appearance-none bg-[${color}] checked:ring-2 checked:ring-offset-2 checked:ring-[${color}]`}
+                onClick={() => handleColorClick(color)}
+              />
+            ))}
           </div>
         )}
       </div>
