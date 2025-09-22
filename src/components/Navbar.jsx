@@ -1,13 +1,13 @@
 import { ShoppingCart, Menu } from "lucide-react";
 import react, { useState } from "react";
-import { Logo } from "./logo";
+import { LogoIcon } from "./LogoIcon";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <nav className="text-black bg-white p-4">
         <div className="flex py-4  border-b-[3px] border-[#f6f7f8] items-center container mx-auto justify-between ">
-          <Logo />
+          <LogoIcon />
 
           <ul className="hidden md:flex space-x-6 lg:space-x-12 xl:space-x-20">
             <li className="text-[#40BFFF] font-semibold">
