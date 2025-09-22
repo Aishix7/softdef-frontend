@@ -1,29 +1,13 @@
 import { ShoppingCart, Menu } from "lucide-react";
 import react, { useState } from "react";
+import { Logo } from "./logo";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <nav className="text-black bg-white p-4">
         <div className="flex py-4  border-b-[3px] border-[#f6f7f8] items-center container mx-auto justify-between ">
-          <div className="flex items-center space-x-2">
-            <div className="bg-[#40BFFF] w-[53px] h-[44px] rounded-[15px] flex items-center justify-center">
-              <svg
-                width="19.56"
-                height="22.67"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-[20.56px] h-[24.67px]"
-              >
-                <polygon points="12 4 21 12 12 20 2.8 12" />
-              </svg>
-            </div>
-            <span className="font-bold text-lg sm:text-xl">E-Comm</span>
-          </div>
+          <Logo />
 
           <ul className="hidden md:flex space-x-6 lg:space-x-12 xl:space-x-20">
             <li className="text-[#40BFFF] font-semibold">
