@@ -117,7 +117,7 @@ export const SideBar = ({ onColorSelect }) => {
                 key={color}
                 type="radio"
                 name="color"
-                className={`w-[.7rem] h-[.6rem] cursor-pointer rounded-full appearance-none bg-[${color}] checked:ring-2 checked:ring-offset-2 checked:ring-[${color}]`}
+                className={`w-[1rem] h-[1rem] cursor-pointer rounded-full appearance-none bg-[${color}] checked:ring-2 checked:ring-offset-2 checked:ring-[${color}]`}
                 onClick={() => handleColorClick(color)}
               />
             ))}

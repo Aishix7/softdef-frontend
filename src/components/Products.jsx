@@ -100,7 +100,6 @@ export const Products = () => {
 
   return (
     <div className="p-2 space-y-4">
-      {/* Top Banner */}
       <div className="w-full h-[350px] rounded-md bg-[#40bfff] flex items-center p-10 justify-between">
         <div className="text-white space-y-4">
           <h1 className="text-3xl font-medium">Adidas Men Running Sneakers</h1>
