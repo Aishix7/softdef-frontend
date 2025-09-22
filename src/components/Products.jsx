@@ -100,29 +100,34 @@ export const Products = () => {
 
   return (
     <div className="p-2 space-y-4">
-      <div className="w-full h-[350px] rounded-md bg-[#40bfff] flex items-center p-10 justify-between">
-        <div className="text-white space-y-4">
-          <h1 className="text-3xl font-medium">Adidas Men Running Sneakers</h1>
-          <p className="text-lg font-normal">
+      <div className="w-full h-[350px] sm:h-[400px] md:h-[450px] rounded-md bg-[#40bfff] flex flex-col lg:flex-row items-center p-4 lg:p-10 justify-between gap-4">
+        <div className="text-white space-y-4 text-center lg:text-left flex-1">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium">
+            Adidas Men Running Sneakers
+          </h1>
+          <p className="text-lg sm:text-xl md:text-lg font-normal">
             Performance and design. Taken right to the edge.
           </p>
-          <a href="#" className="text-sm font-semibold underline">
+          <a
+            href="#"
+            className="text-sm sm:text-base md:text-sm font-semibold underline"
+          >
             SHOP NOW
           </a>
         </div>
-        <div className=" flex-shrink-0">
+        <div className="flex-shrink-0 mt-4 lg:mt-0">
           <img
             src={projectImage}
             alt="Project"
-            className="h-[250px] w-auto object-contain"
+            className="h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px] w-auto object-contain"
           />
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-between bg-white p-4 border rounded-md shadow-sm">
+      <div className="flex flex-col sm:flex-row flex-wrap items-center justify-between bg-white p-4 border rounded-md shadow-sm gap-4">
         <div className="font-medium">{productsData.length} items</div>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
           <div className="flex items-center space-x-2">
             <span>Sort By</span>
             <select
@@ -182,13 +187,13 @@ export const Products = () => {
         ))}
       </div>
 
-      <div className="flex items-center justify-center bg-[#f6f7f8] w-[1150px] h-[50px] rounded-md">
-        <div className="flex justify-center space-x-2">
+      <div className="flex justify-center w-full">
+        <div className="flex flex-wrap justify-center gap-2">
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
               key={i}
               onClick={() => setPage(i + 1)}
-              className={`px-5 py-3 border border-[#40bfff]  ${
+              className={`px-4 py-2 border border-[#40bfff] rounded ${
                 page === i + 1
                   ? "bg-[#40bfff] text-white"
                   : "bg-white text-black"
